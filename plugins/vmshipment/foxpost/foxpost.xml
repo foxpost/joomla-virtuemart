@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="3.1" type="plugin" group="vmshipment" method="upgrade">
+    <name>Foxpost</name>
+    <creationDate>2015.01.28</creationDate>
+    <author>FoxPost Zrt.</author>
+    <authorUrl>2015 Foxpost</authorUrl>
+    <copyright>2015 Foxpost</copyright>
+    <license>2015 Foxpost</license>
+    <version>1.0</version>
+    <description>FOXPOST TERMINALS</description>
+    <languages folder="language">
+        <language tag="hu-HU">hu-HU.com_virtuemart_foxpost.ini</language>
+        <language tag="en-Gb">en-GB.com_virtuemart_foxpost.ini</language>
+    </languages>
+    <files>
+        <filename plugin="foxpost">foxpost.php</filename>
+        <folder>foxpost</folder>
+    </files>
+    
+    
+    <vmconfig>
+
+        <fields name="params">
+            <fieldset name="template">
+                <field name="shipment_logos" type="vmfiles" directory="/plugins/vmshipment/foxpost/images"
+                       hide_none="0" label="VMSHIPMEBNT_FOXPOST_LOGOS"
+                       size="40"
+                       description="VMSHIPMENT_FOXPOST_LOGOS_DESC" />
+            </fieldset>
+            <fieldset name="restrictions">
+                 <field name="api_url" type="text" size="74" default="" label="VMSHIPMENT_FOXPOST_CONFIG_API_URL" description="VMSHIPMENT_FOXPOST_CONFIG_INFO_API_URL" />
+                 <field name="api_username" type="text" size="74" default="" label="VMSHIPMENT_FOXPOST_CONFIG_API_USERNAME" description="VMSHIPMENT_FOXPOST_CONFIG_INFO_API_USERNAME" />
+                 <field name="api_password" type="text" size="74" default="" label="VMSHIPMENT_FOXPOST_CONFIG_API_PASSWORD" description="VMSHIPMENT_FOXPOST_CONFIG_INFO_API_PASSWORD" />
+                 <field name="shipment_cost" type="text" size="5" default="0" label="VMSHIPMENT_FOXPOST_CONFIG_PRICE" description="VMSHIPMENT_FOXPOST_CONFIG_INFO_PRICE" />
+                 <field name="shipment_cost_free_limit" type="text" size="5" default="0" label="VMSHIPMENT_FOXPOST_CONFIG_PRICE_FREE_LIMIT" description="VMSHIPMENT_FOXPOST_CONFIG_INFO_PRICE_FREE_LIMIT" />
+                 <field name="tax_id" type="hidden" scope="com_virtuemart" label="VMSHIPMENT_FOXPOST_CONFIG_TAX" description="VMSHIPMENT_FOXPOST_CONFIG_INFO_TAX" />
+                 <field name="weight_unit" type="hidden"  size="10" default="" label="VMSHIPMENT_FOXPOST_CONFIG_WEIGHT_UNIT" description="VMSHIPMENT_FOXPOST_CONFIG_INFO_WEIGHT_UNIT" />
+                 <field name="max_weight" type="text" size="5" default="25"  label="VMSHIPMENT_FOXPOST_CONFIG_MAX_WEIGHT" description="VMSHIPMENT_FOXPOST_CONFIG_INFO_MAX_WEIGHT" />
+                 <field name="max_dimension_a" type="text" size="10"  default="4.5X36X53" label="VMSHIPMENT_FOXPOST_CONFIG_MAX_DIMENSION_XS" description="VMSHIPMENT_FOXPOST_CONFIG_INFO_MAX_DIMENSION_XS" />
+                 <field name="max_dimension_b" type="text" size="10"  default="12X36X62" label="VMSHIPMENT_FOXPOST_CONFIG_MAX_DIMENSION_S" description="VMSHIPMENT_FOXPOST_CONFIG_INFO_MAX_DIMENSION_S" />
+                 <field name="max_dimension_c" type="text" size="10"  default="20X36X62" label="VMSHIPMENT_FOXPOST_CONFIG_MAX_DIMENSION_M" description="VMSHIPMENT_FOXPOST_CONFIG_INFO_MAX_DIMENSION_M" />
+                 <field name="max_dimension_d" type="text" size="10"  default="38X36X62" label="VMSHIPMENT_FOXPOST_CONFIG_MAX_DIMENSION_L" description="VMSHIPMENT_FOXPOST_CONFIG_INFO_MAX_DIMENSION_L" />
+                 <field name="max_dimension_e" type="text" size="10"  default="60X36X62" label="VMSHIPMENT_FOXPOST_CONFIG_MAX_DIMENSION_XL" description="VMSHIPMENT_FOXPOST_CONFIG_INFO_MAX_DIMENSION_XL" />
+                 <link xml:link="link" href="locator">Link Text</link>
+                 <field name="allowed_country" type="vmcountries" multiple="true" scope="com_virtuemart" default="97" label="VMSHIPMENT_FOXPOST_CONFIG_ALLOWED_COUNTRY" description="VMSHIPMENT_FOXPOST_CONFIG_INFO_ALLOWED_COUNTRY" />
+                 <field name="CheckData" type="radio" scope="com_virtuemart" default="0"
+                               label="VMSHIPMENT_FOXPOST_CHECK_DATA"
+                               description="VMSHIPMENT_FOXPOST_CHECK_DATA_INFO">
+                                <option value="0">COM_VIRTUEMART_NO</option>
+                                <option value="1">COM_VIRTUEMART_YES</option>
+                </field>
+                 <field name="shop_cities" type="hidden" size="10" default="" label="VMSHIPMENT_FOXPOST_CONFIG_SHOP_CITIES" description="VMSHIPMENT_FOXPOST_CONFIG_INFO_SHOP_CITIES" />
+                 <field name="package_fee" type="hidden" label="VMSHIPMENT_FOXPOST_PACKAGE_FEE" description="VMSHIPMENT_WEIGHT_FOXPOST_FEE_DESC"/>
+                 <field name="free_shipment" type="radio" scope="com_virtuemart" default="0"
+                               label="VMSHIPMENT_FOXPOST_FREE_SHIPPING_AMOUNT"
+                               description="VMSHIPMENT_FOXPOST_FREE_SHIPPING_AMOUNT_DESC">
+                                <option value="0">COM_VIRTUEMART_NO</option>
+                                <option value="1">COM_VIRTUEMART_YES</option>
+                 </field>
+                 
+                  
+             </fieldset>
+             
+           </fields> 
+            
+        </vmconfig> 
+
+    <updateservers>
+        <!-- Note: No spaces or linebreaks allowed between the server tags -->
+        <server type="extension" name="VirtueMart3 FOXPST update"></server>
+    </updateservers>
+      
+  </extension>
