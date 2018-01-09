@@ -1,0 +1,12 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!administrator/components/com_virtuemart/controllers/foxpost.php
+!administrator/components/com_virtuemart/models/foxpost.php
+!administrator/components/com_virtuemart/tables/foxpost.php
+!administrator/components/com_virtuemart/views/foxpost
+!images/stories/virtuemart/shipment/foxpost_logo.jpg
+!plugins/vmshipment/foxpost
+!foxpost_telepitesi_utmutato_v1_0.pdf
