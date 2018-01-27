@@ -408,7 +408,7 @@ class plgVmShipmentFoxpost extends vmPSPlugin {
                }
 
 			   
-			   sort($parcelTargetAllMachinesId);
+			   asort($parcelTargetAllMachinesId);
 
                 $foxpost['parcelTargetAllMachinesId'] = $parcelTargetAllMachinesId;
                 $foxpost['parcelTargetAllMachinesDetail'] = $parcelTargetAllMachinesDetail;

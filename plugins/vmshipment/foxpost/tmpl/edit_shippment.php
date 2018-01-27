@@ -189,15 +189,16 @@
        <script src="https://maps.google.com/maps/api/js?key=AIzaSyAtOKO-7tK8ovS9O46Oh0C6oWQaP1Mhiog&libraries=geometry,places,drawing&ext=.js&callback=initialize" async defer></script>
        <script type="text/javascript"> 
            
-           //var directionsDisplay;
-           //var directionsService;
+           var directionsDisplay;
+           var directionsService;
            var map; 
        
                     initialize = function() {
-                       //directionsDisplay = new google.maps.DirectionsRenderer();
-                       //var directionsService = new google.maps.DirectionsService();
+                       directionsDisplay = new google.maps.DirectionsRenderer();
+                       directionsService = new google.maps.DirectionsService();
                         var mapOptions = {
                             zoom: 11,
+							center: {lat: 47.462363, lng: 19.062181},
                             mapTypeId: google.maps.MapTypeId.ROADMAP,
                             
                         }
@@ -367,7 +368,7 @@
                                  
 								 map.setCenter(end);
                                  
-                                 /*directionsService.route(request, function (response, status) {
+                                 directionsService.route(request, function (response, status) {
                                     if (status == google.maps.DirectionsStatus.OK) {
                                         directionsDisplay.setDirections(response);
                                         directionsDisplay.setMap(map);
@@ -379,7 +380,7 @@
                                         map.setCenter(currCenter);
                                     }
                                     
-                                });*/
+                                });
                             
                             }
                                
