@@ -149,7 +149,7 @@
 
 
 
-         <div id="map_canvas" style="width: 600px; height: 500px;"></div>
+         <div id="map_canvas" style="width: 400px; height: 500px;"></div>
 
 
         </td>

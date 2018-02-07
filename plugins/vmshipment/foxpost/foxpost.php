@@ -334,7 +334,7 @@ class plgVmShipmentFoxpost extends vmPSPlugin {
 
                 $content = $this->renderByLayout('edit_shippment',$this->prepareData($cart, $this->methods[0], $this->_psType . '_id_' . $plugin->$pluginmethod_id, $plugin->$pluginmethod_id), 'foxpost', 'vmshipment');
 
-                $html = '<input type="radio" class="foxpost_shippment_plugin" name="' . $pluginmethod_id . '" value="' . $plugin->$pluginmethod_id . '" id="'. $this->_psType.'_id_'. $plugin->$pluginmethod_id.'"  ' . $checked . " ". $disabled .">\n"
+                $html = '<input type="radio" data-dynamic-update="1" class="foxpost_shippment_plugin" name="' . $pluginmethod_id . '" value="' . $plugin->$pluginmethod_id . '" id="'. $this->_psType.'_id_'. $plugin->$pluginmethod_id.'"  ' . $checked . " ". $disabled .">\n"
                  . '<label for="' . $this->_psType . '_id_' . $plugin->$pluginmethod_id . '">' . '<span class="' . $this->_type . '">' . $plugin->$pluginName .' '.$costDisplay." </span></label>
                  $content
                  \n";
